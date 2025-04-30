@@ -1,28 +1,30 @@
 import os
 
-def main():
-    while True:     # Runs until Quit
-        choice = menu()     # Print menu and return the choice of the user
 
-        match choice:       # goes to specific case depending upon the user's choice
+def main():
+    while True:  # Runs until Quit
+        choice = menu()  # Print menu and return the choice of the user
+
+        match choice:  # goes to specific case depending upon the user's choice
             case "1":
-                MinutesToHours()      # Convert minutes to hours
+                MinutesToHours()  # Convert minutes to hours
             case "2":
                 HoursToMinutes()
             case "3":
-                AddTime()      # adds two times
+                AddTime()  # adds two times
             case "0":
                 os.system("clear")
-                break       # breaks out of the loop to exit
+                break  # breaks out of the loop to exit
 
-    print("EXITING!!!")     # last message before exiting
+    print("EXITING!!!")  # last message before exiting
+
 
 def menu():
     print("Time Calculator")
     print("Menu:")
     print("1. Convert Minutes to Hours")
-    print("2. Convert Hours to Minutes")        # TODO 
-    print("3. Add times in format of 00:00")        
+    print("2. Convert Hours to Minutes")  # TODO
+    print("3. Add times in format of 00:00")
     print("0. Exit")
     choice = input("Choice: ")
     return choice
@@ -41,6 +43,7 @@ def MinutesToHours():
     print(f"{hour}:{minutes}")
     print()
 
+
 def HoursToMinutes():
     os.system("clear")
     print("Hours to Minutes Converter")
@@ -49,6 +52,7 @@ def HoursToMinutes():
     minutes = hours * 60
     print(f"{hours} hours is equal to {minutes} minutes.")
     print()
+
 
 def AddTime():
     os.system("clear")
